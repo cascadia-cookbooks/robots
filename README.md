@@ -15,25 +15,31 @@
 ```
 override_attributes({
     cas_robots: {
-        allow: true,
-        path: '/var/www/website/',
-        owner: 'www-data',
-        group: 'www-data',
-        mode: '644',
-        user_agents: {
-            'Google': [
-                '/cgi-bin/',
-                '/tmp/',
-                '/secret.html'
-            ],
-            '*': [
-                '/'
-            ]
+        shop: {
+            allow: true,
+            path: '/var/www/shop/',
+            owner: 'www-data',
+            group: 'www-data',
+            mode: '644',
+            user_agents: {
+                'Google': [
+                    '/cgi-bin/',
+                    '/tmp/',
+                    '/secret.html'
+                ],
+                '*': [
+                    '/'
+                ]
+            },
+            sitemaps: {
+                main: 'https://www.example.com/sitemap.xml',
+                site: 'https://www.example.com/site/sitemap.xml'
+            }
         },
-        sitemaps: {
-            main: 'https://www.example.com/sitemap.xml',
-            blog: 'https://www.example.com/blog/sitemap.xml'
-        }
+        blog: {
+            allow: false,
+            path: '/var/www/blog/robots.txt'
+        } 
     }
 })
 ```
