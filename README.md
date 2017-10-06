@@ -9,6 +9,8 @@
 
 `node['cas_robots']['user_agents']` = (hash)
 
+`node['cas_robots']['sitemaps']` = (hash)
+
 
 ```
 override_attributes({
@@ -27,6 +29,10 @@ override_attributes({
             '*': [
                 '/'
             ]
+        },
+        sitemaps: {
+            main: 'https://www.example.com/sitemap.xml',
+            blog: 'https://www.example.com/blog/sitemap.xml'
         }
     }
 })
