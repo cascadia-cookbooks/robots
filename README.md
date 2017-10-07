@@ -1,16 +1,24 @@
 # Robots.txt
+Manages robots.txt files
 
-`node['cas_robots']['allow']` = (boolean)
+## Supported Platforms
+* CentOS 7
+* Debian - Jessie 8
+* Ubuntu - Xenial 16.04
 
-`node['cas_robots']['path']` = (string)
-`node['cas_robots']['owner']` = (string)
-`node['cas_robots']['group']` = (string)
-`node['cas_robots']['mode']` = (string)
+## Attributes
+- `node['cas_robots'][(name)]['allow']` = (boolean) Default 'false'
+- 
+- `node['cas_robots'][(name)]['path']` = (string)
+- `node['cas_robots'][(name)]['owner']` = (string) Default 'root'
+- `node['cas_robots'][(name)]['group']` = (string) Default 'root'
+- `node['cas_robots'][(name)]['mode']` = (string) Default '0644'
+- 
+- `node['cas_robots'][(name)]['user_agents']` = (hash)
+- 
+- `node['cas_robots'][(name)]['sitemaps']` = (hash)
 
-`node['cas_robots']['user_agents']` = (hash)
-
-`node['cas_robots']['sitemaps']` = (hash)
-
+## Example
 
 ```
 override_attributes({
