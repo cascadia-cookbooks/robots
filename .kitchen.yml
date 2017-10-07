@@ -15,3 +15,18 @@ suites:
     run_list:
     - recipe[cas_robots::default]
     attributes: 
+      cas_robots:
+        example:
+          allow: true
+          path: '/tmp/robots.txt'
+          owner: 'root'
+          group: 'root'
+          user_agents:
+            '*':
+              - 'example/directory'
+              - 'example/file.html'
+          sitemaps:
+            default: 'https://www.example.com/sitemap.xml'
+        example2:
+          allow: false
+          path: '/tmp/example-robots.txt'
