@@ -1,0 +1,17 @@
+<% if @allow == true %>
+    <% @user_agents.each do |user_agent, disallows| -%>
+User-agent: <%= user_agent %>
+        <% disallows.each do |d| -%>
+Disallow: <%= d %>
+        <% end -%>
+    <% end -%>
+
+    <% if @sitemaps -%>
+        <% @sitemaps.each do |name, sitemap| -%>
+Sitemap: <%= sitemap %>
+        <% end -%>
+    <% end -%>
+<% else %>
+User-agent: *
+Disallow: /
+<% end %>
