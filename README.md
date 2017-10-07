@@ -8,14 +8,14 @@ Manages robots.txt files
 
 ## Attributes
 - `node['cas_robots'][(name)]['allow']` = (boolean) Default 'false'
-- 
+
 - `node['cas_robots'][(name)]['path']` = (string)
 - `node['cas_robots'][(name)]['owner']` = (string) Default 'root'
 - `node['cas_robots'][(name)]['group']` = (string) Default 'root'
 - `node['cas_robots'][(name)]['mode']` = (string) Default '0644'
 - 
 - `node['cas_robots'][(name)]['user_agents']` = (hash)
-- 
+ 
 - `node['cas_robots'][(name)]['sitemaps']` = (hash)
 
 ## Example
