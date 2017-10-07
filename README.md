@@ -20,7 +20,7 @@ override_attributes({
             path: '/var/www/shop/',
             owner: 'www-data',
             group: 'www-data',
-            mode: '644',
+            mode: 0644,
             user_agents: {
                 'Google': [
                     '/cgi-bin/',
@@ -38,7 +38,8 @@ override_attributes({
         },
         blog: {
             allow: false,
-            path: '/var/www/blog/robots.txt'
+            path: '/var/www/blog/robots.txt',
+            owner: 'www-data'
         } 
     }
 })
