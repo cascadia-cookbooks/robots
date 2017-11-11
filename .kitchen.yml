@@ -13,7 +13,7 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[cas_robots::default]
+      - recipe[cas_robots::default]
     attributes: 
       cas_robots:
         example:
